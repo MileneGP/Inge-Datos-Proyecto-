@@ -1,0 +1,34 @@
+<%- include('../_header') %>
+  title: <%= title %><br>
+  <%= mensaje %><br>
+  <a href="/boleta/detalle_agregar?boleta_id=<%= boleta_id %>">Agregar Registro</a>
+  <table>
+    <thead>
+      <th>id</th>
+      <th>Nombre</th>
+      <th>cantidad</th>
+      <th>Imagen</th>
+      <th>Acciones</th>
+    </thead>
+    <tbody>
+      <% boletaproducto.forEach((product) => { %>
+      <tr>
+        <td><%= product.id %></td>
+        <td><%= product.nombre %></td>
+        <td><%= product.cantidad %></td>
+
+        <td>
+            <img src="/<%= product.imagen_portada %>" width="50" height="50"/>
+        </td>
+        <td>
+
+          <a href="/boleta/detalle_modificar?id=<%= product.id %>">Editar</a>
+          <a href="/boleta/detalle_eliminar?id=<%= product.id %>">Eliminar</a>
+        </td>
+      </tr>
+      <% }); %>
+    </tbody>
+  </table>  
+  <%- include('../_footer') %>
+</body>
+</html>

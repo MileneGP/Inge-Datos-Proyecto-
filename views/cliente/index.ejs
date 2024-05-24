@@ -1,0 +1,40 @@
+<%- include('../_header') %>
+
+title: <%= title %><br>
+<%= mensaje %><br>
+<a href="/ejercicio/agregar" class="btn">Agregar Registro</a>
+<table>
+  <thead>
+    <th>id</th>
+    <th>Nombre</th>
+    <th>Parte del Cuerpo</th>
+    <th>Imagen</th>
+    <th>Video</th>
+    <th>Acciones</th>
+  </thead>
+  <tbody>
+    <% ejercicios.forEach((ejercicio) => { %>
+    <tr>
+      <td><%= ejercicio.id %></td>
+      <td><%= ejercicio.nombre %></td>
+      <td><%= ejercicio.cuerpo_parte %></td>
+      <td>
+          <img src="/<%= ejercicio.imagen_url %>" width="50" height="50"/>
+      </td>
+      <td>
+          <!--
+          <iframe width="178" height="100" src="https://www.youtube.com/embed/<%= ejercicio.video_url.split('=')[1] %>" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay = False; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+          -->
+          <a href="<%= ejercicio.video_url %>" target="_blank">Ver video</a>
+      </td>
+      <td>
+        <a class="btn" href="/ejercicio/modificar?id=<%= ejercicio.id %>">Editar</a>
+        <a class="btn" href="/ejercicio/eliminar?id=<%= ejercicio.id %>">Eliminar</a>
+      </td>
+    </tr>
+    <% }); %>
+  </tbody>
+</table>  
+<%- include('../_footer') %>
+</body>
+</html>

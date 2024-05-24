@@ -1,0 +1,33 @@
+<%- include('../_header') %>
+  title: <%= title %><br>
+  <%= mensaje %><br>
+  <a href="/categoria">Atras</a>
+  <table>
+    <thead>
+      <th>id</th>
+      <th>Nombre</th>
+      <th>Imagen</th>
+      <th>Acciones</th>
+    </thead>
+    <tbody>
+      <% products.forEach((product) => { %>
+      <tr>
+        <td><%= product.id %></td>
+        <td><%= product.nombre %></td>
+        
+        <td>
+            <img src="/<%= product.imagen_portada %>" width="50" height="50"/>
+        </td>
+        <td>
+          
+          <a href="/producto/modificar?id=<%= product.id %>">Editar</a>
+          
+          
+        </td>
+      </tr>
+      <% }); %>
+    </tbody>
+  </table>  
+  <%- include('../_footer') %>
+</body>
+</html>

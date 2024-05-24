@@ -1,0 +1,4 @@
+CREATE TABLE moneda (
+    id INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,--ID
+    nombre VARCHAR(25) NOT NULL --nombre
+)

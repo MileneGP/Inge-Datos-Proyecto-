@@ -1,0 +1,21 @@
+<%- include('../_header') %>
+  title: <%= title %>
+  <a href="categoria ">Atrás</a> <br>
+   
+
+    
+  <form action="/producto/editar" method="post">
+    <input type="hidden" name="id" value="<%=producto.id%>">
+    
+    
+    <label>Nombre</label>
+    <input type="text" name="nombre" value="<%=producto.nombre%>"><br>
+
+    <label>Imagen</label>
+    <input type="text" name="imagen_portada" value="<%=producto.imagen_portada%>"><br>
+    
+    <input type="submit" value="Guardar Cambios">
+  </form>
+  <%- include('../_footer') %>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<%- include('../_header') %>
+  
+title: <%= title %><br>
+<%= mensaje %><br>
+<a href="/distrito/agregar" class="btn">Agregar Registro</a>
+<table>
+  <thead>
+    <th>id</th>
+    <th>Nombre</th>
+  </thead>
+  <tbody>
+    <% district.forEach((distrito) => { %>
+    <tr>
+      <td><%= distrito.id %></td>
+      <td><%= distrito.nombre %></td>
+      <td>
+        <a class="btn" href="/distrito/modificar?id=<%= distrito.id %>">Editar</a>
+        <a class="btn" href="/distrito/eliminar?id=<%= distrito.id %>">Eliminar</a>
+      </td>
+    </tr>
+    <% }); %>
+  </tbody>
+</table>  
+<%- include('../_footer') %>
+</body>
+</html>

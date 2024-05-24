@@ -1,0 +1,4 @@
+CREATE TABLE tipo_documento (
+    id INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,--ID
+    nombre VARCHAR(15) NOT NULL --nombre
+)

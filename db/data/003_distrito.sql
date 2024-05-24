@@ -1,0 +1,4 @@
+CREATE TABLE distrito (
+    id INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,--ID
+    nombre VARCHAR(30) NOT NULL --nombre
+)

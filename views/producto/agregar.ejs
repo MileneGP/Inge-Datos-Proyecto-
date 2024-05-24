@@ -1,0 +1,14 @@
+<%- include('../_header') %>
+  title: <%= title %>
+  <a href="/producto">Atrás</a> <br>
+  <form action="/producto/crear" method="post">
+    <input type="hidden" name="id" value="E">
+    <label>Nombre</label>
+    <input type="text" name="nombre"><br>
+    <label>Imagen</label>
+    <input type="text" name="imagen_portada">
+    <input type="submit" value="Guardar Cambios">
+  </form>
+  <%- include('../_footer') %>
+</body>
+</html>

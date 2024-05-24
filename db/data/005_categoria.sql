@@ -1,0 +1,5 @@
+CREATE TABLE categoria (
+    id INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
+    nombre VARCHAR(25) NOT NULL ,
+    imagen_url VARCHAR(70) NOT NULL
+)

@@ -1,0 +1,34 @@
+<%- include('../_header') %>
+  title: <%= title %>
+  <a href="/boleta">Atrás</a> <br>
+  <form action="/boleta/crear" method="post">
+    <input type="hidden" name="id" value="E">
+    
+    <label>Numero de Boleta</label>
+    <input type="text" name="num_boleta"><br>
+    
+    <label>Direccion</label>
+    <input type="text" name="direccion"><br>
+    
+    <label>Celular</label>
+    <input type="text" name="celular"><br>
+    
+    <label>Igv</label>
+    <input type="text" name="igv"><br>
+    
+    <label>Importe Total</label>
+    <input type="text" name="importe_total"><br>
+
+    <label>Observacion</label>
+    <input type="text" name="observacion"><br>
+    
+    <label>Fecha de Emision</label>
+    <input type="text" name="fecha_emision"><br>
+    
+    <input type="submit" value="Guardar Cambios">
+  </form>
+  <%- include('../_footer') %>
+</body>
+</html>
+
+ 

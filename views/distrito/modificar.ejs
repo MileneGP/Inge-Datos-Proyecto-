@@ -1,0 +1,12 @@
+<%- include('../_header') %>
+  title: <%= title %>
+  <a href="/distrito">Atrás</a> <br>
+  <form action="/distrito/editar" method="post">
+    <input type="hidden" name="id" value="<%=distrito.id%>">
+    <label>Nombre</label>
+    <input type="text" name="nombre" value="<%=distrito.nombre%>"><br>
+    <input type="submit" value="Guardar Cambios">
+  </form>
+  <%- include('../_footer') %>
+</body>
+</html>

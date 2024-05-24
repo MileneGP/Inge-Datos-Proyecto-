@@ -1,0 +1,14 @@
+<%- include('../_header') %>
+  title: <%= title %>
+  <a href="/boleta">Atrás</a> <br>
+  <form action="/detalle/editar" method="post">
+    <input type="hidden" name="id" value="<%=boletadetalle.id%>">
+
+    <label>Cantidad</label>
+    <input type="text" name="cantidad" value="<%=boletadetalle.cantidad%>"><br>
+    
+    <input type="submit" value="Guardar Cambios">
+  </form>
+  <%- include('../_footer') %>
+</body>
+</html>

@@ -1,0 +1,12 @@
+<%- include('../_header') %>
+  title: <%= title %>
+  <a href="/subcategoria">Atrás</a> <br>
+  <form action="/subcategoria/editar" method="post">
+    <input type="hidden" name="id" value="<%=subcategoria.id%>">
+    <label>Nombre</label>
+    <input type="text" name="nombre" value="<%=subcategoria.nombre%>"><br>
+    <input type="submit" value="Guardar Cambios">
+  </form>
+  <%- include('../_footer') %>
+</body>
+</html>

@@ -1,0 +1,4 @@
+CREATE TABLE carrito (
+    id INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,--ID
+    sub_total INTEGER --nombre
+)

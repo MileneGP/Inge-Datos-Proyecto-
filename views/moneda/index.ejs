@@ -1,0 +1,25 @@
+<%- include('../_header') %>
+  <%= mensaje %><br>
+  <a href="/moneda/agregar" class="btn">Agregar Registro</a>
+  <table>
+    <thead>
+      <th>id</th>
+      <th>Nombre</th>
+      <th>Acciones</th>
+    </thead>
+    <tbody>
+      <% money.forEach((moneda) => { %>
+      <tr>
+        <td><%= moneda.id %></td>
+        <td><%= moneda.nombre %></td>
+        <td>
+          <a class="btn" href="/moneda/modificar?id=<%= moneda.id %>">Editar</a>
+          <a class="btn" href="/moneda/eliminar?id=<%= moneda.id %>">Eliminar</a>
+        </td>
+      </tr>
+      <% }); %>
+    </tbody>
+  </table> 
+  <%- include('../_footer') %>
+</body>
+</html>

@@ -1,0 +1,23 @@
+<%- include('../_header') %>
+  title: <%= title %>
+  <a href="/boleta">Atrás</a> <br>
+  <form action="/boleta/editar" method="post">
+    <input type="hidden" name="id" value="<%=boleta.id%>">
+    <label>Num_boleta</label>
+    <input type="text" name="num_boleta" value="<%=boleta.num_boleta%>"><br>
+
+    <label>Direccion</label>
+    <input type="text" name="direccion" value="<%=boleta.direccion%>"><br>
+
+    <label>Celular</label>
+    <input type="text" name="celular" value="<%=boleta.celular%>"><br>
+
+
+    <label>observacion</label>
+    <input type="text" name="observacion" value="<%=boleta.observacion%>"><br>
+    
+    <input type="submit" value="Guardar Cambios">
+  </form>
+  <%- include('../_footer') %>
+</body>
+</html>

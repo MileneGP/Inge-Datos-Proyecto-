@@ -1,0 +1,25 @@
+<%- include('../_header') %>
+  title: <%= title %>
+  <a href="/detalle">Atrás</a> <br>
+  <form action="/detalle/crear" method="post">
+    <input type="hidden" name="id" value="E">
+    <input type="hidden" name="boleta_id" value="<%= boleta_id %>">
+    
+
+    
+    <label>Productos</label>
+    <!-- <input type="text" name="cuerpo_parte_id"> -->
+    <select name="producto_id">
+      <% producto.forEach((Product) => { %>
+        <option value="<%= Product.id %>"><%= Product.nombre%></option>
+      <% }); %>
+    </select><br>
+        
+    <label>Cantidad</label>
+    <input type="text" name="cantidad"><br>
+        
+    <input type="submit" value="Guardar Cambios">
+  </form>
+  <%- include('../_footer') %>
+</body>
+</html>

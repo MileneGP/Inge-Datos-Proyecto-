@@ -1,0 +1,87 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Georgia', serif; /* Fuente más cálida y acogedora */
+  background-color: #fff5e6; /* Un color de fondo suave, evocando harina o masa */
+}
+
+nav {
+  background-color: #d7a96b; /* Un tono marrón claro, evocando el color del pan */
+}
+
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li {
+  display: inline;
+}
+
+nav ul li a {
+  display: inline-block;
+  color: #3e2723; /* Un color marrón oscuro para contraste */
+  text-align: center;
+  padding: 14px 20px;
+  text-decoration: none;
+  font-weight: bold; /* Texto más destacado */
+  transition: background-color 0.3s, color 0.3s; /* Suavizar la transición */
+}
+
+nav ul li a:hover {
+  background-color: #a98274; /* Un tono más claro para el hover, como una baguette */
+  color: #fff; /* Contraste en el hover */
+}
+
+/* Estilo de la tabla ajustado al tema de panadería */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  border: 1px solid #d7a96b; /* Borde acorde al tema */
+}
+
+th {
+  background-color: #f5e0c1; /* Fondo claro, como una masa lista para hornear */
+  color: #3e2723; /* Color de texto para contraste */
+  border: 1px solid #d7a96b;
+  padding: 8px;
+  text-align: left;
+}
+
+td {
+  border: 1px solid #d7a96b;
+  padding: 8px;
+}
+
+tr:nth-child(odd) {
+  background-color: #f9f9f9; /* Alternando colores para mejorar la legibilidad */
+}
+
+table:hover {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Mantener para enfocar la atención */
+}
+
+/* Botón más adecuado para una panadería */
+.btn {
+  display: inline-block;
+  padding: 10px 20px;
+  border: 1px solid #d7a96b; /* Borde más cálido */
+  border-radius: 5px;
+  background-color: #f5e0c1; /* Color de fondo suave */
+  color: #3e2723; /* Color de texto para fácil lectura */
+  text-decoration: none;
+  transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+}
+
+.btn:hover {
+  background-color: #d7a96b; /* Color de hover más intenso */
+  color: #fff; /* Mayor contraste en el hover */
+  border-color: #a98274; /* Borde de hover acorde */
+}
+
+footer {
+  background-color: #d7a96b; /* Make footer color match header */
+  padding: 0.5px;
+  color: #3e2723; /* Text color for footer */
+}

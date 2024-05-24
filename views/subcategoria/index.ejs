@@ -1,0 +1,31 @@
+<%- include('../_header') %>
+  title: <%= title %><br>
+  <%= mensaje %><br>
+  
+  <table>
+    <thead>
+      <th>id</th>
+      <th>Nombre</th>
+      <th>Acciones</th>
+    </thead>
+    <tbody>
+      <% subcategories.forEach((subcategory) => { %>
+      <tr>
+        <td><%= subcategory.id %></td>
+        <td><%= subcategory.nombre %></td>
+        
+        <td>
+          <a href="/producto?id=<%= subcategory.id %>"> Ver productos  </a>
+          <a href="/subcategoria/modificar?id=<%= subcategory.id%>">Editar</a>
+          
+        
+          
+         
+        </td>
+      </tr>
+      <% }); %>
+    </tbody>
+  </table>  
+  <%- include('../_footer') %>
+</body>
+</html>

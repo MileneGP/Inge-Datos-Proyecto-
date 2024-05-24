@@ -1,0 +1,34 @@
+<%- include('../_header') %>
+  title: <%= title %><br>
+  <%= mensaje %><br>
+  
+  <table>
+    <thead>
+      <th>id</th>
+      <th>Nombre</th>
+      <th>imagen</th>
+      <th>Acciones</th>
+    </thead>
+    <tbody>
+      <% category.forEach((categoria) => { %>
+      <tr>
+        <td><%= categoria.id %></td>
+        <td><%= categoria.nombre %></td>
+        <td>
+            <img src="/<%= categoria.imagen_url %>" width="50" height="50"/>
+        </td>
+        <td>
+          <a href="/subcategoria?id=<%= categoria.id %>">Ver subcategoria</a>
+
+          
+          <a href="/categoria/modificar?id=<%= categoria.id %>">Editar</a>
+          
+          
+        </td>
+      </tr>
+      <% }); %>
+    </tbody>
+  </table>  
+  <%- include('../_footer') %>
+</body>
+</html>

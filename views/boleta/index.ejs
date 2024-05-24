@@ -1,0 +1,39 @@
+<%- include('../_header') %>
+  title: <%= title %><br>
+  <%= mensaje %><br>
+  <a href="/boleta/agregar">Agregar Registro</a>
+  <table>
+    <thead>
+      <th>id</th>
+      <th>Num_Boleta</th>
+      <th>Direccion</th>
+      <th>Celular</th>
+      <th>Igv</th>
+      <th>Importe_total</th>
+      <th>Observacion</th>
+      <th>Fecha_emision</th>
+    </thead>
+    <tbody>
+      <% receipt.forEach((receipt) => { %>
+      <tr>
+        <td><%= receipt.id %></td>
+        <td><%= receipt.num_boleta %></td>
+        <td><%= receipt.direccion %></td>
+        <td><%= receipt.celular%></td>
+        <td><%= receipt.igv%></td>
+        <td><%= receipt.importe_total%></td>
+        <td><%= receipt.observacion%></td>
+        <td><%= receipt.fecha_emision%></td>
+        
+        <td>
+          <a href="/boleta/productos?boleta_id=<%= receipt.id %>">ver productos</a>
+          <a href="/boleta/modificar?id=<%= receipt.id %>">Editar</a>
+          <a href="/boleta/eliminar?id=<%= receipt.id %>">Eliminar</a>
+        </td>
+      </tr>
+      <% }); %>
+    </tbody>
+  </table>  
+  <%- include('../_footer') %>
+</body>
+</html>
